@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nombre del archivo donde se guardarán los tiempos de ejecución
-outputFile="resultadoJacobiSecuencial.csv"
+outputFile="resultadoJacobiSecuencial.csv" # si se usa JacobiSecuencialScriptAll se debe cambiar por outputFile=$1
 
 # Ubicación del ejecutable
 executable="./jacobiSecuencialExe"
