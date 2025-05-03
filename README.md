@@ -1,7 +1,7 @@
 
 # Jacobi Project: Solving the 1D Poisson Equation
 
-This project implements the Jacobi method to solve the 1D Poisson equation using three approaches: sequential, multithreading (threads), and multiprocessing. The code is written in C and allows you to compare the performance of each approach in terms of execution times under different grid size and iteration configurations.
+This project implements the Jacobi method to solve the 1D Poisson equation using four approaches: sequential, multithreading (threads), OpenMP and multiprocessing. The code is written in C and allows you to compare the performance of each approach in terms of execution times under different grid size and iteration configurations.
 
 ## Description
 
@@ -10,6 +10,7 @@ The purpose of this project is to solve the 1D Poisson equation using the iterat
 - **Sequential**: The algorithm runs on a single execution thread.
 - **Multithreading**: Uses multiple threads to divide the work of solving the system.
 - **Multiprocessing**: Uses multiple processes to perform the iterations in parallel.
+- **Multithreading with OpenMP**: This version parallelizes the Jacobi method using OpenMP to further optimize performance, especially on multi-core machines.
 
 Each version is optimized to evaluate efficiency based on the number of threads or processes used.
 
@@ -29,6 +30,10 @@ Each version is optimized to evaluate efficiency based on the number of threads 
    ```bash
    gcc -o JacobiProcesos JacobiProcesos.c -lm
    ```
+   For the OpenMP version (multithreading with OpenMP):
+   ```bash
+   gcc -fopenmp -o JacobiOmp JacobiOmp.c -lm
+   ```
 
 ## Usage
 
@@ -47,6 +52,11 @@ To run the program, use the following commands. In each command, you can specify
 ### Multiprocessing Version:
 ```bash
 ./JacobiProcesos <size> <iterations> <processes> <output_file>
+```
+
+### Multithreading Version with OpenMP:
+```bash
+./JacobiOmp <size> <iterations> <threads> <output_file>
 ```
 
 #### Parameters:
@@ -70,6 +80,11 @@ To run the program, use the following commands. In each command, you can specify
 ### Sequential:
 ```bash
 ./JacobiSecuencial 100000 1000 results_sequential.csv
+```
+
+### With OpenMP (Threads):
+```bash
+./JacobiOmp 100000 1000 4 results_openmp.csv
 ```
 
 ## Running Scripts
