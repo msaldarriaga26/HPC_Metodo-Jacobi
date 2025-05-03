@@ -10,7 +10,7 @@ executable="./jacobiSecuencialExe"
 echo "Tamaño,Steps,Tiempos" > "$outputFile"
 
 # Valores de nsteps y tamaños de malla a probar
-nsteps_values=(100 500 1000 2000 3000 4000 5000 6000 8000 10000)
+nsteps_values=(500 1000 2000 3000 4000 5000 6000 8000 10000)
 sizes=(100000 500000 2000000 3000000 5000000 7000000 10000000)
 
 # Bucle para diferentes tamaños de malla y nsteps

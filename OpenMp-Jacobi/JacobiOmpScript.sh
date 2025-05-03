@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nombre del archivo donde se guardarán los tiempos de ejecución
-outputFile=$1
+outputFile="ResultadoJacobiOmp.csv" # si se usa JacobiOmpScriptAll se debe cambiar por outputFile=$1
 
 # Ubicación del ejecutable
 executable="./JacobiExecutableOmp"
