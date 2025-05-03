@@ -79,6 +79,9 @@ In addition to running the compiled versions of the code, you can run the `*.sh`
 - `JacobiHilosScript.sh`
 - `JacobiProcesosScript.sh`
 - `JacobiSecuencialScript.sh`
+- `JacobiSecuencialScriptAll.sh`
+- `JacobiOmpScript.sh`
+- `JacobiOmpScriptAll.sh`
 
 To run a script, use the following command:
 
